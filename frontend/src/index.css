@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+/* Base styles (global reset + theme) */
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  body {
+    @apply bg-[#060b14] text-slate-200 antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+
+  textarea {
+    resize: vertical;
+  }
+
+  input:focus,
+  select:focus,
+  textarea:focus {
+    @apply border-blue-500;
+  }
+}
+
+/* Scrollbar (still custom CSS) */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0f1e;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Form tweaks */
+select option {
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(0.5);
+  cursor: pointer;
+}
