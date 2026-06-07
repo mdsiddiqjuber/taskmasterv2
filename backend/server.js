@@ -36,10 +36,7 @@ app.set("trust proxy", process.env.NODE_ENV === "production" ? 1 : false);
 
 app.use(helmet());
 app.use(cors({ 
-   origin: [
-    "http://localhost:5173",
-    "http://taskmaster-frontend-siddiq.s3-website-ap-southeast-2.amazonaws.com"
-   ],
+   origin: process.env.CLIENT_URL,
    credentials: true 
 }));
 app.use(mongoSanitize()); // Prevent NoSQL injection
