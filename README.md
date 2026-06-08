@@ -204,3 +204,11 @@ await fetchFn(params, { signal: abortRef.current.signal });
 | GET | `/api/v1/users` | admin | List users |
 | PATCH | `/api/v1/users/:id/role` | `manage:roles` | Change role |
 | PATCH | `/api/v1/users/:id/deactivate` | admin | Deactivate user |
+
+## Deployment
+
+- Frontend served through Nginx
+- Backend running on Node.js + Express
+- Process manager: PM2
+- Database: MongoDB Atlas
+- Hosted on AWS EC2
